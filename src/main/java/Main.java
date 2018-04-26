@@ -47,7 +47,7 @@ public class Main {
       String json = gson.toJson(command);
       System.out.println(json);
 
-      Command invCommand = gson.fromJson(json, Command.class);
+      Command invCommand = gson.fromJson("{'type':'GetIP', 'xxx': 'yyy'}", Command.class);
       if (invCommand instanceof GetIP) {
         System.out.println(((GetIP) invCommand).toString());
       }
